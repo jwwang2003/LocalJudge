@@ -1,0 +1,35 @@
+.App {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 35px auto;
+
+  .TitleBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: rgba(0,0,0,0.75);
+    -webkit-app-region: drag;
+
+    svg {
+      box-sizing: border-box;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 7.5px;
+      padding-bottom: 7.5px;
+      height: 100%;
+      width: auto;
+      -webkit-app-region: no-drag;
+      transition: 0.25s ease;
+    }
+
+    svg:hover {
+      cursor: pointer;
+      background: rgb(100,100,100);
+      transform: scale(0.85)
+    }
+
+    .exit:hover {
+      background: rgb(255,0,0);
+    }
+  }
+}
